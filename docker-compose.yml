@@ -1,0 +1,11 @@
+version: "3.6"
+services:
+
+  mb:
+    build: .
+    ports:
+    - '2525:2525'
+    - '8090:8090'  
+    volumes:
+    - ./imposters:/imposters
+    command: mb --configfile /imposters/imposters.ejs --allowInjection

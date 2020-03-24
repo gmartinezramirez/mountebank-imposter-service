@@ -6,6 +6,7 @@ services:
     ports:
     - '2525:2525'
     - '8090:8090'  
+    - '42000:42000'
     volumes:
     - ./imposters:/imposters
     command: mb --configfile /imposters/imposters.ejs --allowInjection

@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: mountebankimposterservice 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: mountebankimposterservice 
+    spec:
+      containers:
+        - name: mountebankimposterservice 
+          image: preagendamiento.azurecr.io/mountebankimposterservice
+          ports:
+          - containerPort: 2525

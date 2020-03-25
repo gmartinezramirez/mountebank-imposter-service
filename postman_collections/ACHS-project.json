@@ -1,0 +1,30 @@
+{
+	"info": {
+		"_postman_id": "5fc24703-5236-4d59-878a-32dbc9e86547",
+		"name": "ACHS-project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "01-GET centros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:42000/api/centros/",
+					"host": [
+						"localhost"
+					],
+					"port": "42000",
+					"path": [
+						"api",
+						"centros",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

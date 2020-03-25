@@ -6,7 +6,7 @@
       "predicates": [
         {
           "equals": {
-            "path": "/api/1.0/test/",
+            "path": "/api/centros/",
             "method": "GET"
           }
         }
@@ -14,12 +14,13 @@
       "responses": [
         {
           "is": {
-            "headers": {
+	    "statusCode": 200,
+	    "headers": {
               "Content-Type": "application/json"
             },
-            "body": {
-              "result": "this is mock response",
-              "status": "SUCCESS"
+	    "body": {
+	      "id" : "d30cd5da-8424-4922-a7ff-4ecb670a6c0a",
+	      "nombre":  "achs principal"
             }
           }
         }

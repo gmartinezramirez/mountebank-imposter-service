@@ -42,7 +42,14 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
-          
+    - task: DockerCompose@0
+      inputs:
+          containerregistrytype: 'Azure Container Registry'
+          azureSubscription: 'Pre Agendamiento (ba10e75d-9812-4287-851a-a380629158f0)'
+          azureContainerRegistry: '{"loginServer":"preagendamiento.azurecr.io", "id" : "/subscriptions/ba10e75d-9812-4287-851a-a380629158f0/resourceGroups/pre-agendamiento-front/providers/Microsoft.ContainerRegistry/registries/preagendamiento"}'
+          dockerComposeFile: '**/docker-compose.yml'
+          action: 'Run a Docker Compose command'
+          dockerComposeCommand: 'docker-compose up'
     - upload: manifests
       artifact: manifests
 

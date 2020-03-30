@@ -16,11 +16,21 @@
           "is": {
 	    "statusCode": 200,
 	    "headers": {
-              "Content-Type": "application/json"
+              "Content-Type": "application/json",
+              "Access-Control-Allow-Origin": "*",
+              "Access-Control-Allow-Methods": "GET, POST, PUT, PATCH, DELETE"
             },
 	    "body": {
-	      "id" : "d30cd5da-8424-4922-a7ff-4ecb670a6c0a",
-	      "nombre":  "achs principal"
+              "centros" : [{
+                "id" : "d30cd5da-8424-4922-a7ff-4ecb670a6c0a",
+                "nombre":  "achs principal"
+                    },
+        
+              {
+                "id" : "d30cd5da-8424-4922-a7ff-4ecb670a6c6h",
+                "nombre":  "achs segundo"
+                    }]
+
             }
           }
         }
